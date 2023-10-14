@@ -38,35 +38,47 @@ const Search = styled.div`
   }
   ,
   button {
-    background-color: #252732;
+    background-color: #51556b;
     color: #fff;
     border: none;
     padding: 10px 15px;
     margin-left: 10px;
     border-radius: 55px;
-  }
-  button: hover {
-    background-color: #121319;
-    cursor: pointer;
-  }
-`;
-
-const Actions = styled.div`
-  button {
+    &: hover {
     background-color: #252732;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin-left: 10px;
-    border-radius: 55px;
-  }
-  button: hover {
-    background-color: #121319;
     cursor: pointer;
+    color: orange;
   }
 `;
 
-const CustomButton = styled.button``;
+const Actions = styled.div``;
+
+const Button = styled.button`
+  background-color: #252732;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 55px;
+  &: hover {
+    background-color: orange;
+    cursor: pointer;
+    color: #252732;
+  }
+`;
+
+const CustomBottonWithId = styled.button`
+  color: #fff;
+  background-color: #3a3d4d;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+
+  &: hover {
+    color: orange;
+    cursor: pointer;
+  }
+`;
 
 function Header() {
   return (
@@ -79,11 +91,12 @@ function Header() {
           <input type="text" placeholder="Buscar..." />
           <button className="search-btn">Search</button>
         </Search>
+
         <Actions className="actions">
-          <CustomButton id="custom-btn" className="--btn">
-            Sign in
-          </CustomButton>
-          <button className="btn">Sign up</button>
+          <CustomBottonWithId id="custom-btn" className="--btn">
+            Sign in{" "}
+          </CustomBottonWithId>
+          <Button>Sign up</Button>
         </Actions>
       </Navbar>
     </HeaderWrapper>
